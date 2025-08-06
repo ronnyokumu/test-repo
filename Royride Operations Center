@@ -89,7 +89,6 @@ Completed: 0
 </div>
 
       <!-- Clients Panel -->
-      <!-- Clients Panel -->
 <div class="rr-panel hidden" id="rr-clients-panel">
   <div class="rr-panel-header" style="justify-content: space-between; flex-wrap: wrap;">
     <button class="rr-btn">+ New Client</button>
@@ -98,11 +97,11 @@ Completed: 0
 
   <div class="rr-clients-table">
     <div class="rr-clients-row rr-head">
-      <div>Full Name</div>
+      <div>Name</div>
       <div>Email</div>
-      <div>Phone Number</div>
-      <div>Total Bookings</div>
-      <div>Last Activity</div>
+      <div>Phone</div>
+      <div>ID Number</div>
+      <div>Verification</div>
       <div>Actions</div>
     </div>
 
@@ -639,6 +638,19 @@ Completed: 0
   border-left: 4px solid #ef4444; /* red */
 }
 
+/* === Verification Badge Colors (Clients Panel) === */
+.rr-badge.rr-verification.pending {
+  background: #facc15; /* yellow */
+}
+
+.rr-badge.rr-verification.verified {
+  background: #22c55e; /* green */
+}
+
+.rr-badge.rr-verification.rejected {
+  background: #ef4444; /* red */
+}
+
 </style>
 <!-- Reusable Modal -->
 <div class="rr-modal-overlay hidden" id="rr-modal-overlay">
@@ -985,17 +997,32 @@ function showNewClientForm() {
       <label>Full Name<input name="name" required></label>
       <label>Email<input type="email" name="email" required></label>
       <label>Phone Number<input name="phone" required></label>
+      <label>ID Number<input name="id" required></label>
+      <label>Verification
+        <select name="verification" required>
+          <option value="Pending">Pending</option>
+          <option value="Verified">Verified</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+      </label>
       <button type="submit" class="rr-btn" style="margin-top: 16px">Add Client</button>
     </form>`;
+
   openModalWithForm("New Client", formHTML, (formData) => {
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const id = formData.get('id');
+    const verification = formData.get('verification');
+
     const row = document.createElement('div');
     row.className = 'rr-clients-row';
     row.innerHTML = `
-      <div>${formData.get('name')}</div>
-      <div>${formData.get('email')}</div>
-      <div>${formData.get('phone')}</div>
-      <div>0</div>
-      <div>${new Date().toISOString().split('T')[0]}</div>
+      <div>${name}</div>
+      <div>${email}</div>
+      <div>${phone}</div>
+      <div>${id}</div>
+      <div><span class="rr-badge rr-verification ${verification.toLowerCase()}">${verification}</span></div>
       <div>
         <button class="rr-action-btn edit">Edit</button>
         <button class="rr-action-btn delete">Delete</button>
