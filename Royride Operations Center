@@ -1,0 +1,1234 @@
+<div class="rr-header-bar">
+  <div class="rr-header-title">Royride Operations Center</div>
+  <div class="rr-nav-tabs">
+   <div class="rr-nav-tabs">
+  <div class="rr-tab active" data-tab="bookings">
+    <svg xmlns="http://www.w3.org/2000/svg" class="rr-nav-icon" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+      <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Bookings
+  </div>
+  <div class="rr-tab" data-tab="fleet">
+    <svg xmlns="http://www.w3.org/2000/svg" class="rr-nav-icon" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+      <path d="M5 16V7a2 2 0 012-2h10a2 2 0 012 2v9M3 16h18M7 20h2a2 2 0 002-2v-2H7v2a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Fleet
+  </div>
+  <div class="rr-tab" data-tab="clients">
+    <svg xmlns="http://www.w3.org/2000/svg" class="rr-nav-icon" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+      <path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M9 7a4 4 0 118 0 4 4 0 01-8 0z" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Clients
+  </div>
+  <div class="rr-tab" data-tab="transactions">
+    <svg xmlns="http://www.w3.org/2000/svg" class="rr-nav-icon" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+      <path d="M12 8V4m0 0L8 8m4-4l4 4M4 12h16M12 16v4m0 0l-4-4m4 4l4-4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Transactions
+  </div>
+  <div class="rr-tab" data-tab="settings">
+    <svg xmlns="http://www.w3.org/2000/svg" class="rr-nav-icon" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c0 .66.42 1.24 1 1.51.4.17.85.26 1.31.26H21a2 2 0 010 4h-.09c-.46 0-.91.09-1.31.26z" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Settings
+  </div>
+</div>
+
+    <div id="rr-widget-panel">
+      <!-- Bookings Panel -->
+      <div class="rr-panel" id="rr-bookings-panel">
+        <!-- Bookings Panel Header (Updated) -->
+<div class="rr-panel-header bookings-header" style="justify-content: space-between; flex-wrap: wrap; align-items: center;">
+  <!-- Stat Cards -->
+  <div class="rr-booking-stats">  
+<div class="rr-stat-card active">
+    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium h-4 w-4 mb-1 css-q7mezt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CalendarTodayIcon" style="height: 1.3rem; width: 1.3rem;"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 18H4V8h16z"></path></svg>
+    Active:0
+  </div>
+
+<div class="rr-stat-card upcoming">
+   <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium h-4 w-4 mb-1 css-q7mezt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CalendarTodayIcon" style="height: 1.3rem; width: 1.3rem;"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 18H4V8h16z"></path></svg>
+Upcoming: 0
+</div>
+
+<div class="rr-stat-card completed">
+   <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium h-4 w-4 mb-1 css-q7mezt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CalendarTodayIcon" style="height: 1.3rem; width: 1.3rem;"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 18H4V8h16z"></path></svg>
+Completed: 0
+</div>
+</div>
+
+<div class="rr-booking-controls-row">
+    <button class="rr-btn rr-add-booking">+ New Booking</button>
+    <div class="rr-control-group">
+      <input type="text" class="rr-search" placeholder="Search Bookings...">
+      <select class="rr-filter">
+        <option value="">Filter</option>
+        <option value="today">Today</option>
+        <option value="this-week">This Week</option>
+      </select>
+      <select class="rr-sort">
+        <option value="">Sort By</option>
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+        <div class="rr-bookings-table">
+          <div class="rr-bookings-row rr-head">
+            <div>Booking ID</div>            
+            <div>Client Name</div>
+            <div>Vehicle</div>
+            <div>Start</div>
+            <div>End</div>
+            <div>Contract</div>
+            <div>Payment</div>
+          </div>
+
+          </div>
+</div>
+
+      <!-- Fleet Panel -->
+      <!-- Fleet Panel -->
+<div class="rr-panel hidden" id="rr-fleet-panel">
+  <div class="rr-panel-header" style="justify-content: space-between; flex-wrap: wrap;">
+    <button class="rr-btn">+ Add Vehicle</button>
+  </div>
+
+  <div class="rr-fleet-table">
+    <div class="rr-fleet-row rr-head">
+      <div>Vehicle</div>
+      <div>License Plate</div>
+      <div>Price/Day</div>
+      <div>Availability</div>
+      <div>Gross Income</div>
+      <div>Actions</div>
+    </div>
+
+        <!-- Dynamic vehicle rows will be injected below -->
+     <div id="fleetTableBody"></div>
+     </div>
+   </div>
+ </div>
+</div>
+
+      <!-- Clients Panel -->
+      <!-- Clients Panel -->
+<div class="rr-panel hidden" id="rr-clients-panel">
+  <div class="rr-panel-header" style="justify-content: space-between; flex-wrap: wrap;">
+    <button class="rr-btn">+ New Client</button>
+    <input type="text" class="rr-search" placeholder="Search by name, email, or phone..." />
+  </div>
+
+  <div class="rr-clients-table">
+    <div class="rr-clients-row rr-head">
+      <div>Full Name</div>
+      <div>Email</div>
+      <div>Phone Number</div>
+      <div>Total Bookings</div>
+      <div>Last Activity</div>
+      <div>Actions</div>
+    </div>
+
+    <!-- Dynamic client rows will be injected here -->
+    <div id="clientTableBody"></div>
+  </div>
+</div>
+</div>
+</div>
+
+            <!-- Transactions Panel -->
+<!-- Transactions Panel -->
+<div class="rr-panel hidden" id="rr-transactions-panel">
+
+<div class="rr-summary">
+  <div class="rr-stat-card received" id="totalReceived">
+    <svg xmlns="http://www.w3.org/2000/svg" class="rr-icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+    Total Received: KES 0
+  </div>
+
+  <div class="rr-stat-card pending" id="totalPending">
+    <svg xmlns="http://www.w3.org/2000/svg" class="rr-icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+    Total Pending: KES 0
+  </div>
+
+  <div class="rr-stat-card voided" id="totalVoided">
+    <svg xmlns="http://www.w3.org/2000/svg" class="rr-icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+    Total Voided: KES 0
+  </div>
+</div>
+
+  <div class="rr-bookings-table">
+    <div class="rr-bookings-row rr-head">
+      <div>Booking ID</div>
+      <div>Client</div>
+      <div>Vehicle</div>
+      <div>Amount</div>
+      <div>Rental Period</div>
+      <div>Date</div>
+      <div>Payment</div>
+    </div>
+    <!-- New transaction rows will appear below -->
+  </div>
+    
+</div>
+
+      <!-- Settings Panel -->
+      <div class="rr-panel hidden" id="rr-settings-panel">...</div>
+    </div>
+  </div>
+</div>
+
+<style>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  body {
+  font-family: 'Cabin', sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+  .rr-header { background: black; color: white; padding: 16px 24px; font-size: 20px; font-weight: 600; }
+
+.rr-nav-tabs {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+}
+
+  .rr-tab {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    color: #555;
+    white-space: nowrap;
+  }
+.rr-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem 2rem;
+  color: white;
+  box-shadow: 0 6px 12px rgba(56, 181, 253, 0.5); /* ✨ Blue glow */
+}
+
+.rr-header-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.rr-nav-tabs {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.rr-tab {
+  color: white;
+  font-weight: normal;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+  position: relative;
+}
+
+.rr-tab:hover {
+  color: #38b5fd;
+}
+
+.rr-tab.active {
+  color: #38b5fd;
+}
+
+  .rr-tab.active {
+    color: #38b5fd;
+    font-weight: 600;
+  }
+
+  .rr-panel { padding: 24px; }
+  .hidden { display: none; }
+  .rr-panel-title { font-size: 20px; font-weight: 600; margin-bottom: 20px; }
+  .rr-panel-header { display: flex; justify-content: flex-start; align-items: center; margin-bottom: 20px; gap: 12px; flex-wrap: wrap; }
+
+  .rr-search, .rr-filter { padding: 8px 12px; font-size: 14px; border: 1px solid #ccc; border-radius: 6px; }
+  .rr-search { width: 240px; }
+  .rr-filter { width: 160px; }
+  .rr-btn { background: #38b5fd; color: white; padding: 8px 14px; font-size: 14px; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; }
+
+  .rr-bookings-table, .rr-fleet-table, .rr-clients-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .rr-bookings-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    background: #fafafa;
+    border-radius: 6px;
+    padding: 12px;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .rr-fleet-row, .rr-clients-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    background: #fafafa;
+    border-radius: 6px;
+    padding: 12px;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .rr-bookings-row.rr-head,
+  .rr-fleet-row.rr-head,
+  .rr-clients-row.rr-head {
+    background: #f0f8ff;
+    font-weight: 600;
+    color: #333;
+  }
+
+ .rr-badge {
+  padding: 6px 14px;
+  border-radius: 999px; /* Capsule shape */
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  user-select: none;
+  background: #ccc;
+}
+
+/* Payment Status Colors */
+.rr-payment.paid {
+  background: rgba(39, 174, 96, 0.75);  /* Soft green */
+}
+
+.rr-payment.unpaid {
+  background: rgba(127, 140, 141, 0.75); /* Soft gray */
+}
+
+.rr-payment.voided {
+  background: rgba(217, 83, 79, 0.75);   /* Soft red */
+}
+  .rr-contract.pending { background: #7f8c8d; }
+  .rr-contract.signed { background: #27ae60; }
+ <span class="rr-badge rr-payment paid">✅ Paid</span>
+<span class="rr-badge rr-payment unpaid">⏳ Unpaid</span>;}
+  .rr-status.pending { background: #7f8c8d; }
+  .rr-status.approved { background: #5cb85c; }
+  .rr-status.cancelled { background: #d9534f; }
+  .rr-approved { background: #27ae60; }
+  .rr-pending { background: #7f8c8d; }
+
+  .toggle-contract, .toggle-payment, .toggle-status, .toggle-fleet-status {
+    cursor: pointer;
+  }
+
+  .toggle-contract:focus, .toggle-payment:focus, .toggle-status:focus, .toggle-fleet-status:focus {
+    outline: 2px solid #38b5fd;
+    outline-offset: 2px;
+  }
+
+  .rr-action-btn {
+    padding: 5px 10px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .rr-action-btn.edit {
+    background: #38b5fd;
+    color: white;
+  }
+
+  .rr-action-btn.delete {
+    background: #000;
+    color: white;
+  }
+.rr-summary {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.rr-stat-card {
+  padding: 24px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  flex: 1;
+  min-width: 180px;
+  color: #111;
+  background: white;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid transparent;
+}
+
+.rr-stat-card.received {
+  border-left-color: rgba(16, 185, 129, 0.6);  /* Soft green */
+}
+
+.rr-stat-card.pending {
+  border-left-color: rgba(250, 204, 21, 0.6);  /* Soft yellow */
+}
+
+.rr-stat-card.voided {
+  border-left-color: rgba(239, 68, 68, 0.6);   /* Soft red */
+}
+
+.rr-stat-card.refunded {
+  border-left-color: rgba(107, 114, 128, 0.6); /* Soft gray */
+}
+.rr-card-amount {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.rr-card-label {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.rr-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.rr-modal {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 480px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.25s ease;
+}
+
+.rr-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.rr-modal-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* ===== BUTTON INTERACTIONS ===== */
+.rr-btn,
+.rr-action-btn {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.rr-btn:hover,
+.rr-action-btn:hover {
+  transform: scale(1.03);
+}
+
+/* Default rr-btn (e.g. +New Booking) */
+.rr-btn:hover {
+  background-color: #000;
+}
+
+/* Edit button */
+.rr-action-btn.edit:hover {
+  background-color: #33CC33;
+}
+
+/* Delete button - turns red on hover */
+.rr-action-btn.delete:hover {
+  background-color: #FF3737;
+  color: white;
+}
+/* Modal Form Premium Layout */
+.rr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rr-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 4px;
+}
+.rr-form input,
+.rr-form select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.rr-panel {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.bookings-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.rr-booking-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 0px;
+}
+
+.rr-stat-card {
+  flex: 1 1 calc(33.333% - 11px);
+  min-width: 363px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f9f9f9;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border-left: 5px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  font-size: 15px;
+  color: #222;
+  transition: background 0.2s ease;
+  cursor: default;
+}
+
+.rr-stat-card svg {
+  flex-shrink: 0;
+}
+
+/* Accent color indicators */
+.rr-stat-card.active {
+  border-left-color: rgba(16, 185, 129, 0.6); /* Green */
+}
+
+.rr-stat-card.upcoming {
+  border-left-color: rgba(59, 130, 246, 0.6); /* Blue */
+}
+
+.rr-stat-card.completed {
+  border-left-color: rgba(107, 114, 128, 0.6); /* Gray */
+}
+
+.rr-booking-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.rr-booking-controls-row .rr-btn {
+  flex-shrink: 0;
+}
+
+.rr-control-group {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.rr-control-group .rr-search {
+  flex-grow: 1;
+  min-width: 180px;
+  max-width: 300px;
+}
+
+.rr-booking-controls-container {
+  margin-top: 1.5rem;
+}
+
+.rr-booking-controls-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.rr-booking-controls-row .rr-btn {
+  flex-shrink: 0;
+}
+
+.rr-control-group {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.rr-control-group .rr-search {
+  flex-grow: 1;
+  min-width: 180px;
+  max-width: 300px;
+}
+
+/* Restore original filter/sort visual style */
+.rr-filter,
+.rr-sort {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+  font-size: 0.9rem;
+}
+
+.rr-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.rr-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9f9f9;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  font-size: 15px;
+  color: #222;
+  flex: 1 1 250px;
+  transition: background 0.2s ease;
+  cursor: default;
+}
+
+.rr-stat-card svg.rr-icon {
+  width: 24px;
+  height: 24px;
+  stroke: black; /* default color, can be overridden */
+  flex-shrink: 0;
+}
+
+.rr-stat-card.received {
+  border-left: 4px solid #22c55e; /* green */
+}
+
+.rr-stat-card.pending {
+  border-left: 4px solid #facc15; /* yellow */
+}
+
+.rr-stat-card.voided {
+  border-left: 4px solid #ef4444; /* red */
+}
+
+/* Apply character spacing to visible text without breaking layout */
+.rr-widget,
+.rr-table th,
+.rr-table td,
+.rr-form label,
+.rr-form input,
+.rr-stat-card {
+  letter-spacing: 1px;
+}
+
+/* Ensure search/filter tools align to the right inside the bookings panel */
+#rr-bookings-panel .rr-booking-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Character spacing for search, filter, and sort fields */
+.rr-booking-tools input[type="text"],
+.rr-booking-tools select,
+.rr-booking-tools .rr-sort {
+  letter-spacing: 1px;
+}
+
+/* Adjust character spacing for all buttons */
+button,
+.rr-btn {
+  letter-spacing: 1px;
+}
+
+/* Character spacing for tab/panel headings */
+.rr-tab {
+  letter-spacing: 1px;
+}
+
+/* Character spacing for section headers inside each panel */
+.rr-panel-heading,
+.rr-panel-title,
+.rr-booking-title {
+  letter-spacing: 1px;
+}
+.rr-booking-tools input[type="text"],
+.rr-booking-tools select {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+}
+
+.rr-nav-tabs .rr-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rr-nav-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+</style>
+<!-- Reusable Modal -->
+<div class="rr-modal-overlay hidden" id="rr-modal-overlay">
+  <div class="rr-modal">
+    <div class="rr-modal-header">
+      <span id="rr-modal-title">Modal Title</span>
+      <button class="rr-modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="rr-modal-content" id="rr-modal-content">
+      <!-- Dynamic content goes here -->
+      <p>This is a placeholder. Replace with a form or message.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.rr-tab');
+  const panels = document.querySelectorAll('.rr-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = tab.getAttribute('data-tab');
+      panels.forEach(panel => panel.classList.add('hidden'));
+      document.querySelector(`#rr-${target}-panel`).classList.remove('hidden');
+    });
+  });
+
+  function toggleContractStatus(badge) {
+    if (badge.classList.contains('signed')) {
+      badge.classList.remove('signed');
+      badge.classList.add('pending');
+      badge.textContent = 'Pending';
+      badge.setAttribute('aria-pressed', 'false');
+    } else {
+      badge.classList.remove('pending');
+      badge.classList.add('signed');
+      badge.textContent = 'Signed';
+      badge.setAttribute('aria-pressed', 'true');
+    }
+  }
+
+ function togglePaymentStatus(badge) {
+  const isPaid = badge.classList.contains('paid');
+
+  // Toggle current badge
+  badge.classList.toggle('paid', !isPaid);
+  badge.classList.toggle('unpaid', isPaid);
+  badge.textContent = isPaid ? 'Unpaid' : 'Paid';
+  badge.setAttribute('aria-pressed', !isPaid ? 'true' : 'false');
+
+  // Get the Booking ID from the same row
+  const row = badge.closest('.rr-bookings-row');
+  const bookingID = row?.querySelector('div')?.textContent.trim();
+
+  // Locate and update the corresponding transaction badge
+  const txRows = document.querySelectorAll('#rr-transactions-panel .rr-bookings-row:not(.rr-head)');
+  txRows.forEach(txRow => {
+    const txID = txRow.children[0]?.textContent.trim();
+    if (txID === bookingID) {
+      const txBadge = txRow.querySelector('.rr-badge.rr-payment');
+      if (txBadge) {
+        txBadge.classList.toggle('paid', !isPaid);
+        txBadge.classList.toggle('unpaid', isPaid);
+        txBadge.textContent = isPaid ? 'Unpaid' : 'Paid';
+        txBadge.setAttribute('aria-pressed', !isPaid ? 'true' : 'false');
+      }
+    }
+  });
+
+  updateTransactionSummary();
+}
+
+  function toggleBookingStatus(badge) {
+    if (badge.classList.contains('pending')) {
+      badge.classList.remove('pending');
+      badge.classList.add('approved');
+      badge.textContent = 'Approved';
+      badge.setAttribute('aria-pressed', 'true');
+    } else if (badge.classList.contains('approved')) {
+      badge.classList.remove('approved');
+      badge.classList.add('cancelled');
+      badge.textContent = 'Cancelled';
+      badge.setAttribute('aria-pressed', 'false');
+    } else {
+      badge.classList.remove('cancelled');
+      badge.classList.add('pending');
+      badge.textContent = 'Pending';
+      badge.setAttribute('aria-pressed', 'false');
+    }
+  }
+
+  function toggleFleetStatus(badge) {
+    if (badge.classList.contains('rr-approved')) {
+      badge.classList.remove('rr-approved');
+      badge.classList.add('rr-pending');
+      badge.textContent = 'Booked';
+      badge.setAttribute('aria-pressed', 'false');
+    } else {
+      badge.classList.remove('rr-pending');
+      badge.classList.add('rr-approved');
+      badge.textContent = 'Available';
+      badge.setAttribute('aria-pressed', 'true');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toggle-contract').forEach(badge => {
+      badge.addEventListener('click', () => toggleContractStatus(badge));
+      badge.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleContractStatus(badge);
+        }
+      });
+    });
+
+    document.querySelectorAll('.toggle-payment').forEach(badge => {
+      badge.addEventListener('click', () => togglePaymentStatus(badge));
+      badge.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          togglePaymentStatus(badge);
+        }
+      });
+    });
+
+    document.querySelectorAll('.toggle-status').forEach(badge => {
+      badge.addEventListener('click', () => toggleBookingStatus(badge));
+      badge.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleBookingStatus(badge);
+        }
+      });
+    });
+
+   document.querySelectorAll('.toggle-contract').forEach(badge => {
+  badge.addEventListener('click', () => toggleContractStatus(badge));
+  badge.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleContractStatus(badge);
+    }
+  });
+});
+// Disable manual toggling in transactions panel
+document.querySelector('#rr-transactions-panel').addEventListener('click', (e) => {
+  if (e.target.classList.contains('toggle-payment')) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+});
+// Prevent toggling in Transactions panel directly
+document.querySelector('#rr-transactions-panel').addEventListener('click', (e) => {
+  if (e.target.classList.contains('toggle-payment')) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+});
+});
+</script>
+<!-- MILESTONE 1: Modal Form Injection -->
+<script>
+// Shared Data Arrays
+const bookings = [], vehicles = [], clients = [];
+
+function openModalWithForm(title, formHTML, onSubmit) {
+  document.getElementById('rr-modal-title').textContent = title;
+  document.getElementById('rr-modal-content').innerHTML = formHTML;
+  document.getElementById('rr-modal-overlay').classList.remove('hidden');
+  const form = document.getElementById('rr-form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    onSubmit(new FormData(form));
+    closeModal();
+  });
+}
+
+function closeModal() {
+  document.getElementById('rr-modal-overlay').classList.add('hidden');
+}
+
+// Booking Form
+function showNewBookingForm() {
+  const formHTML = `
+    <form id="rr-form" class="rr-form">
+      <label>Client Name<input name="client" required></label>
+      <label>Vehicle
+        <select name="vehicle" required>
+          <option value="">Select Vehicle</option>
+          <option>Toyota Prado</option>
+          <option>Mazda Demio</option>
+          <option>Nissan Xtrail</option>
+        </select>
+      </label>
+      <label>Start Date/Time<input type="datetime-local" name="start" required></label>
+      <label>End Date/Time<input type="datetime-local" name="end" required></label>
+      <label>Status
+        <select name="status" required>
+          <option>Pending</option>
+          <option>Approved</option>
+          <option>Cancelled</option>
+        </select>
+      </label>
+      <button type="submit" class="rr-btn" style="margin-top: 16px">Create Booking</button>
+    </form>`;
+
+  openModalWithForm("New Booking", formHTML, (formData) => {
+    // 1. Append booking row
+    const bookingTable = document.querySelector('.rr-bookings-table');
+    const bookingRows = bookingTable.querySelectorAll('.rr-bookings-row:not(.rr-head)');
+   const bookingID = '#BN' + Date.now().toString().slice(-5); // consistent unique ID
+
+const row = document.createElement('div');
+row.className = 'rr-bookings-row';
+row.innerHTML = `
+  <div>${bookingID}</div> <!-- Booking ID: used to sync -->
+  <div>${formData.get('client')}</div>
+  <div>${formData.get('vehicle')}</div>
+  <div>${formData.get('start')}</div>
+  <div>${formData.get('end')}</div>
+  <div><span class="rr-badge rr-contract pending toggle-contract" tabindex="0" role="button">Pending</span></div>
+  <div><span class="rr-badge rr-payment unpaid toggle-payment" tabindex="0" role="button" aria-pressed="false">Unpaid</span></div>
+`;
+bookingTable.appendChild(row);
+
+    // 2. Get vehicle price
+    const vehiclePrices = {
+      'Toyota Prado': 13000,
+      'Mazda Demio': 3500,
+      'Nissan Xtrail': 7000
+    };
+    const selectedVehicle = formData.get('vehicle');
+    const amount = vehiclePrices[selectedVehicle] || 5000;
+
+    // 3. Append transaction row
+   createTransactionRow(
+  formData.get('client'),
+  formData.get('vehicle'),
+  amount,
+  formData.get('start'),
+  formData.get('end'),
+  bookingID // ✅ pass the same ID used in bookings
+);
+
+    // 4. Refresh summary stats
+    updateTransactionSummary();
+  });
+}
+function createTransactionRow(clientName, vehicle, amount, startDate, endDate, bookingID) {
+  const transactionsTable = document.querySelector('#rr-transactions-panel .rr-bookings-table');
+  const txRows = transactionsTable.querySelectorAll('.rr-bookings-row:not(.rr-head)');
+ const txID = bookingID;
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+  const rentalDays = Math.max(1, Math.ceil((end - start) / (1000 * 60 * 60 * 24)));
+  const totalAmount = rentalDays * amount; // amount = daily rate passed in
+
+
+  const row = document.createElement('div');
+  row.className = 'rr-bookings-row';
+  row.innerHTML = `
+    <div>${txID}</div>
+    <div>${clientName}</div>
+    <div>${vehicle}</div>
+    <div>KES ${totalAmount.toLocaleString()}</div>
+    <div>${rentalDays} ${rentalDays === 1 ? 'day' : 'days'}</div>
+    <div>${new Date().toISOString().split('T')[0]}</div>
+    <div><span class="rr-badge rr-payment unpaid toggle-payment" tabindex="0" role="button" aria-pressed="false">Unpaid</span></div>
+  `;
+  transactionsTable.appendChild(row);
+
+  updateTransactionSummary();
+}
+
+function updateTransactionSummary() {
+  const txRows = document.querySelectorAll('#rr-transactions-panel .rr-bookings-row:not(.rr-head)');
+  let totalReceived = 0;
+  let pending = 0;
+  let voided = 0;
+
+  txRows.forEach(row => {
+    const amountCell = row.children[3]; // Amount
+    const statusCell = row.children[6]; // Payment status badge
+    const amountText = amountCell.textContent.replace(/[^\d]/g, '');
+    const amount = parseInt(amountText, 10) || 0;
+
+    const badge = statusCell.querySelector('.rr-badge');
+    const status = badge ? badge.textContent.trim().toLowerCase() : '';
+
+    if (status === 'paid') totalReceived += amount;
+    else if (status === 'unpaid' || status === 'pending') pending += amount;
+    else voided += amount; // includes voided/refunded or any other tag
+  });
+
+  const summaryCards = document.querySelectorAll('#rr-transactions-panel .rr-stat-card');
+  if (summaryCards.length >= 3) {
+    summaryCards[0].textContent = `Received: KES ${totalReceived.toLocaleString()}`;
+    summaryCards[1].textContent = `Pending: KES ${pending.toLocaleString()}`;
+    summaryCards[2].textContent = `Voided: KES ${voided.toLocaleString()}`;
+  }
+}
+// --- End of Block B (updateTransactionSummary) ---
+
+// Vehicle Form
+function showNewVehicleForm() {
+  const formHTML = `
+    <form id="rr-form" class="rr-form">
+      <label>Vehicle Name<input name="name" required></label>
+      <label>License Plate<input name="plate" required></label>
+      <label>Price per Day<input name="price" required></label>
+      <label>Status
+        <select name="status" required>
+          <option>Available</option>
+          <option>Booked</option>
+        </select>
+      </label>
+      <button type="submit" class="rr-btn" style="margin-top: 16px">Add Vehicle</button>
+    </form>`;
+  openModalWithForm("Add Vehicle", formHTML, (formData) => {
+    const isAvailable = formData.get('status') === 'Available';
+    const row = document.createElement('div');
+    row.className = 'rr-fleet-row';
+    row.innerHTML = `
+      <div>${formData.get('name')}</div>
+      <div>${formData.get('plate')}</div>
+      <div>KES ${formData.get('price')}</div>
+      <div><span class="rr-badge ${isAvailable ? 'rr-approved' : 'rr-pending'} toggle-fleet-status" tabindex="0" role="button">${formData.get('status')}</span></div>
+      <div>
+        <button class="rr-action-btn edit">Edit</button>
+        <button class="rr-action-btn delete">Delete</button>
+      </div>
+    `;
+    document.querySelector('.rr-fleet-table').appendChild(row);
+  });
+}
+
+// Client Form
+function showNewClientForm() {
+  const formHTML = `
+    <form id="rr-form" class="rr-form">
+      <label>Full Name<input name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Phone Number<input name="phone" required></label>
+      <button type="submit" class="rr-btn" style="margin-top: 16px">Add Client</button>
+    </form>`;
+  openModalWithForm("New Client", formHTML, (formData) => {
+    const row = document.createElement('div');
+    row.className = 'rr-clients-row';
+    row.innerHTML = `
+      <div>${formData.get('name')}</div>
+      <div>${formData.get('email')}</div>
+      <div>${formData.get('phone')}</div>
+      <div>0</div>
+      <div>${new Date().toISOString().split('T')[0]}</div>
+      <div>
+        <button class="rr-action-btn edit">Edit</button>
+        <button class="rr-action-btn delete">Delete</button>
+      </div>
+    `;
+    document.querySelector('.rr-clients-table').appendChild(row);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('#rr-bookings-panel .rr-btn').addEventListener('click', showNewBookingForm);
+  document.querySelector('#rr-fleet-panel .rr-btn').addEventListener('click', showNewVehicleForm);
+  document.querySelector('#rr-clients-panel .rr-btn').addEventListener('click', showNewClientForm);
+});
+
+// ===== MILESTONE 2: EDIT + DELETE LOGIC =====
+function bindRowButtons() {
+  // Bookings Edit/Delete
+  document.querySelectorAll('.rr-bookings-row:not(.rr-head)').forEach(row => {
+    const editBtn = row.querySelector('.edit');
+    const deleteBtn = row.querySelector('.delete');
+    if (editBtn) {
+      editBtn.onclick = () => {
+        const cells = row.children;
+        const formHTML = `
+          <form id="rr-form" class="rr-form">
+            <label>Client Name<input name="client" value="${cells[0].textContent}" required></label>
+            <label>Vehicle<input name="vehicle" value="${cells[1].textContent}" required></label>
+            <label>Start<input type="datetime-local" name="start" value="${formatDateInput(cells[2].textContent)}" required></label>
+            <label>End<input type="datetime-local" name="end" value="${formatDateInput(cells[3].textContent)}" required></label>
+            <label>Status
+              <select name="status">
+                <option ${cells[4].textContent === 'Pending' ? 'selected' : ''}>Pending</option>
+                <option ${cells[4].textContent === 'Approved' ? 'selected' : ''}>Approved</option>
+                <option ${cells[4].textContent === 'Cancelled' ? 'selected' : ''}>Cancelled</option>
+              </select>
+            </label>
+            <button type="submit" class="rr-btn" style="margin-top: 16px">Save Changes</button>
+          </form>
+        `;
+        openModalWithForm('Edit Booking', formHTML, formData => {
+          cells[0].textContent = formData.get('client');
+          cells[1].textContent = formData.get('vehicle');
+          cells[2].textContent = formData.get('start');
+          cells[3].textContent = formData.get('end');
+          const status = formData.get('status');
+          const badge = cells[4].querySelector('.rr-badge');
+          badge.textContent = status;
+          badge.className = `rr-badge rr-status ${status.toLowerCase()} toggle-status`;
+        });
+      };
+    }
+    if (deleteBtn) {
+      deleteBtn.onclick = () => {
+        if (confirm('Delete this booking?')) row.remove();
+      };
+    }
+  });
+
+  // Fleet Edit/Delete
+  document.querySelectorAll('.rr-fleet-row:not(.rr-head)').forEach(row => {
+    const editBtn = row.querySelector('.edit');
+    const deleteBtn = row.querySelector('.delete');
+    if (editBtn) {
+      editBtn.onclick = () => {
+        const cells = row.children;
+        const formHTML = `
+          <form id="rr-form" class="rr-form">
+            <label>Vehicle<input name="name" value="${cells[0].textContent}" required></label>
+            <label>License Plate<input name="plate" value="${cells[1].textContent}" required></label>
+            <label>Price/Day<input name="price" value="${parseInt(cells[2].textContent.replace(/\D/g,''))}" required></label>
+            <label>Status
+              <select name="status">
+                <option ${cells[3].textContent === 'Available' ? 'selected' : ''}>Available</option>
+                <option ${cells[3].textContent === 'Booked' ? 'selected' : ''}>Booked</option>
+              </select>
+            </label>
+            <button type="submit" class="rr-btn" style="margin-top: 16px">Save Changes</button>
+          </form>
+        `;
+        openModalWithForm('Edit Vehicle', formHTML, formData => {
+          cells[0].textContent = formData.get('name');
+          cells[1].textContent = formData.get('plate');
+          cells[2].textContent = `KES ${formData.get('price')}`;
+          const badge = cells[3].querySelector('.rr-badge');
+          badge.textContent = formData.get('status');
+          badge.className = `rr-badge ${formData.get('status') === 'Available' ? 'rr-approved' : 'rr-pending'} toggle-fleet-status`;
+        });
+      };
+    }
+    if (deleteBtn) {
+      deleteBtn.onclick = () => {
+        if (confirm('Delete this vehicle?')) row.remove();
+      };
+    }
+  });
+
+  // Clients Edit/Delete
+  document.querySelectorAll('.rr-clients-row:not(.rr-head)').forEach(row => {
+    const editBtn = row.querySelector('.edit');
+    const deleteBtn = row.querySelector('.delete');
+    if (editBtn) {
+      editBtn.onclick = () => {
+        const cells = row.children;
+        const formHTML = `
+          <form id="rr-form" class="rr-form">
+            <label>Full Name<input name="name" value="${cells[0].textContent}" required></label>
+            <label>Email<input name="email" value="${cells[1].textContent}" required></label>
+            <label>Phone<input name="phone" value="${cells[2].textContent}" required></label>
+            <button type="submit" class="rr-btn" style="margin-top: 16px">Save Changes</button>
+          </form>
+        `;
+        openModalWithForm('Edit Client', formHTML, formData => {
+          cells[0].textContent = formData.get('name');
+          cells[1].textContent = formData.get('email');
+          cells[2].textContent = formData.get('phone');
+        });
+      };
+    }
+    if (deleteBtn) {
+      deleteBtn.onclick = () => {
+        if (confirm('Delete this client?')) row.remove();
+      };
+    }
+  });
+}
+
+// Utility
+function formatDateInput(datetime) {
+  return new Date(datetime).toISOString().slice(0, 16);
+}
+
+// Attach a single event listener to the bookings table (event delegation)
+document.querySelector('#rr-bookings-panel .rr-bookings-table').addEventListener('click', (e) => {
+  const badge = e.target.closest('.toggle-payment');
+  if (badge) {
+    e.preventDefault();
+    togglePaymentStatus(badge);
+  }
+});
+
+// Also allow keyboard access
+document.querySelector('#rr-bookings-panel .rr-bookings-table').addEventListener('keydown', (e) => {
+  const badge = e.target.closest('.toggle-payment');
+  if (badge && (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault();
+    togglePaymentStatus(badge);
+  }
+});
+</script>
