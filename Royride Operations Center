@@ -961,26 +961,32 @@ function updateTransactionSummary() {
 function showNewVehicleForm() {
   const formHTML = `
     <form id="rr-form" class="rr-form">
-      <label>Vehicle Name<input name="name" required></label>
-      <label>License Plate<input name="plate" required></label>
-      <label>Price per Day<input name="price" required></label>
-      <label>Status
-        <select name="status" required>
-          <option>Available</option>
-          <option>Booked</option>
+      <label>Vehicle Name<input name="vehicle" required></label>
+      <label>License Plate<input name="license" required></label>
+      <label>Rental Price/Day<input name="price" type="number" required></label>
+      <label>Availability
+        <select name="availability" required>
+          <option value="Available">Available</option>
+          <option value="Unavailable">Unavailable</option>
         </select>
       </label>
       <button type="submit" class="rr-btn" style="margin-top: 16px">Add Vehicle</button>
     </form>`;
-  openModalWithForm("Add Vehicle", formHTML, (formData) => {
-    const isAvailable = formData.get('status') === 'Available';
+
+  openModalWithForm("New Vehicle", formHTML, (formData) => {
+    const vehicle = formData.get('vehicle');
+    const license = formData.get('license');
+    const price = Number(formData.get('price'));
+    const availability = formData.get('availability');
+
     const row = document.createElement('div');
     row.className = 'rr-fleet-row';
     row.innerHTML = `
-      <div>${formData.get('name')}</div>
-      <div>${formData.get('plate')}</div>
-      <div>KES ${formData.get('price')}</div>
-      <div><span class="rr-badge ${isAvailable ? 'rr-approved' : 'rr-pending'} toggle-fleet-status" tabindex="0" role="button">${formData.get('status')}</span></div>
+      <div>${vehicle}</div>
+      <div>${license}</div>
+      <div>KES ${price.toLocaleString()}</div>
+      <div><span class="rr-badge rr-availability ${availability.toLowerCase()}">${availability}</span></div>
+      <div>KES 0</div>
       <div>
         <button class="rr-action-btn edit">Edit</button>
         <button class="rr-action-btn delete">Delete</button>
